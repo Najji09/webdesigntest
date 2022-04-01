@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  color: #222328;
+  background-color: #fff;
+}
+
+div#wrap {
+  width: 1000px;
+  margin: 0 auto;
+  outline: 1px solid blue;
+}
+
+div#wrap:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+header {
+  width: 200px;
+  height: 100%;
+  outline: 1px solid blue;
+  float: left;
+}
+
+header h1 {
+  width: 200px;
+  height: 100px;
+}
+
+header img {
+  margin-top: 30px;
+}
+
+header nav {
+  width: 200px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  background-color: #fff;
+}
+header nav a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header nav > ul {
+  position: relative;
+}
+header nav > ul li {
+  height: 40px;
+  line-height: 40px;
+}
+header nav > ul > li > ul {
+  width: 200px;
+  position: absolute;
+  z-index: 10;
+  left: 200px;
+  top: 0;
+  display: none;
+  background-color: #fff;
+  height: 160px;
+}
+header nav > ul > li > ul > li {
+  box-sizing: border-box;
+  border-bottom: 1px solid #999;
+}
+/* header nav > ul > li:hover ul {
+  display: block;
+} */
+header nav > ul li:hover > a {
+  background-color: orange;
+  font-weight: bold;
+}
+div.side {
+  position: relative;
+  outline: 1px solid blue;
+  float: right;
+  width: 800px;
+}
+main {
+  position: relative;
+  width: 800px;
+  height: 350px;
+  overflow: hidden;
+}
+main ul {
+  position: relative;
+}
+main ul li {
+  position: absolute;
+  height: 350px;
+  top: 0;
+  left: 0;
+}
+main ul li.active {
+  z-index: 2;
+}
+main img {
+  width: 800px;
+  height: 350px;
+  display: block;
+  position: absolute;
+}
+div.contents {
+  display: flex;
+  height: 200px;
+}
+
+div.contents div.bbs {
+  position: relative;
+  width: 400px;
+}
+div.bbs dl {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 400px;
+}
+div.bbs dl dt {
+  position: absolute;
+  cursor: pointer;
+  top: -40px;
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  width: 200px;
+  display: block;
+  border-top-right-radius: 30px;
+}
+div.bbs dl:last-of-type dt {
+  right: 0;
+}
+dl dd {
+  width: 400px;
+  height: 160px;
+  box-sizing: border-box;
+  border: 1px solid #222328;
+}
+dl.on dd {
+  display: block;
+}
+dl.hidden dt {
+  background-color: #ddd;
+  color: #222328;
+}
+dl.on dt {
+  color: #ddd;
+  background-color: #222328;
+}
+dl:first-child ul {
+  padding: 10px 20px;
+}
+dl:first-child ul li {
+  list-style: circle;
+  list-style-position: inside;
+  line-height: 1.7;
+  position: relative;
+  width: 100%;
+}
+dl:first-child ul li span {
+  position: absolute;
+  right: 0;
+}
+dl:first-child ul li:hover a {
+  text-decoration: underline;
+}
+
+dl:last-child ul {
+  display: flex;
+}
+
+dl:last-child ul li {
+  padding: 30px 15px;
+  flex: 1;
+}
+
+dl img {
+  width: 100px;
+  height: 80px;
+}
+
+dl.hidden dd {
+  display: none;
+}
+
+div.contents div.banner img {
+  width: 200px;
+  height: 200px;
+}
+div.goto {
+  width: 200px;
+  height: 200px;
+}
+div#popup_wrap {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+div#popup {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div#popup h1 {
+  width: 450px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  background-color: #ddd;
+}
+div#popup div.p_cont {
+  position: absolute;
+  width: 430px;
+  left: 35px;
+  top: 90px;
+  height: 370px;
+}
+
+div#popup h2 {
+  margin-bottom: 20px;
+}
+div.p_close {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+div.p_close a {
+  padding: 10px 10px;
+  border: 1px solid #000;
+}

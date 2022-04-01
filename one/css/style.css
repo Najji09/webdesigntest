@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+div#wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  height: 100px;
+  border: 1px solid black;
+  position: relative;
+}
+
+header::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+header h1 {
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  width: 200px;
+}
+header nav {
+  position: absolute;
+  right: 10px;
+  z-index: 3;
+  float: right;
+  border: 1px solid black;
+  background-color: #fff;
+  margin-top: 36px;
+}
+header nav > ul::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+header nav > ul > li {
+  width: 120px;
+  line-height: 60px;
+  text-align: center;
+  float: left;
+}
+header nav > ul > li > a {
+  border: 1px solid black;
+}
+header nav ul a {
+  display: block;
+}
+header nav > ul > li > ul {
+  display: none;
+}
+/* header nav > ul:hover ul {
+  display: block;
+} */
+header nav ul > li:hover > a {
+  background-color: black;
+  color: #fff;
+}
+main {
+  width: 1200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+main ul::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+main ul {
+  position: absolute;
+  top: 0;
+}
+main ul li {
+  position: absolute;
+}
+main img {
+  width: 1200px;
+  height: 300px;
+}
+main ul li:nth-of-type(1) {
+  left: 0;
+}
+main ul li:nth-of-type(2) {
+  left: 1200px;
+}
+main ul li:nth-of-type(3) {
+  left: 2400px;
+}
+div.middle {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+div.middle > div {
+  width: 400px;
+  position: relative;
+}
+div.middle .board dl {
+  position: relative;
+  top: 40px;
+}
+
+div.middle .board dl dt {
+  line-height: 40px;
+  position: absolute;
+  width: 100px;
+  border: 1px solid;
+  text-align: center;
+  top: -40px;
+}
+dl.no dt {
+  background-color: #fff;
+}
+dl.no dt a {
+  color: #000;
+}
+div.middle .board dl dd {
+  position: absolute;
+  top: 0px;
+  height: 160px;
+  width: 400px;
+  border: 1px solid;
+  display: none;
+}
+div.middle .board dl dd ul li {
+  line-height: 36px;
+  position: relative;
+}
+div.middle .board dl dd ul li span {
+  position: absolute;
+  right: 10px;
+}
+div.middle .board dl dd ul li a:hover {
+  text-decoration: underline;
+}
+
+div.middle .board dl dd img {
+  float: left;
+  margin: 20px;
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+}
+div.middle .board dl:nth-of-type(2) dt {
+  left: 100px;
+}
+div.middle .board dl:nth-of-type(2) dd:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+dl.on dt {
+  background-color: black;
+  color: #fff;
+}
+dl.on dd {
+  display: block !important;
+}
+
+div.middle .banner {
+  text-align: center;
+  line-height: 200px;
+  border: 1px solid;
+}
+div.middle .goto {
+  text-align: center;
+  line-height: 200px;
+  border: 1px solid;
+}
+footer {
+  display: flex;
+  border: 1px solid black;
+}
+footer h1 {
+  display: block;
+  flex: 1;
+}
+footer p {
+  display: block;
+  flex: 1;
+}
